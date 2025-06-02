@@ -4,6 +4,7 @@ numpy
 pandas
 psycopg2-binary
 lxml
+yaml
 python-dotenv
 
 # 可視化・テスト（任意）
