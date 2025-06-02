@@ -15,10 +15,8 @@ pytest
 IPython
 
 # 追加：機械学習・DB操作・深層学習
-sqlalchemy
 scikit-learn
-torch
-torchvision
+scipy
 
 # VASP関係
 pymatgen
