@@ -1,0 +1,84 @@
+data:
+  raw:
+    - dataset_1/
+    - dataset_2/
+  processed:
+    - train/
+    - validation/
+    - test/
+  external:
+    - external_data_file.csv
+
+notebooks:
+  - exploratory.ipynb
+  - feature_engineering.ipynb
+  - model_prototyping.ipynb
+
+src:
+  data_processing.py:
+    functions:
+      - load_data
+      - clean_data
+      - transform_data
+  models.py:
+    classes:
+      - ModelArchitecture
+  training.py:
+    functions:
+      - train_model
+      - evaluate_model
+  pipelines.py:
+    functions:
+      - data_pipeline
+      - training_pipeline
+  utils.py:
+    functions:
+      - save_model
+      - load_model
+
+config:
+  data_config:
+    raw_data_path: "data/raw/"
+    processed_data_path: "data/processed/"
+  model_config:
+    model_type: "RandomForest"
+    hyperparameters:
+      n_estimators: 100
+      max_depth: 10
+  train_config:
+    batch_size: 32
+    learning_rate: 0.001
+    num_epochs: 50
+
+experiments:
+  - experiment_20250602_001/
+  - experiment_20250602_002/
+
+models:
+  - best_model_v1.pth
+  - latest_model.pth
+
+reports:
+  - final_report.pdf
+  - visualizations/
+
+tests:
+  - test_data_processing.py
+  - test_models.py
+
+.gitignore:
+  - __pycache__/
+  - *.pyc
+  - .DS_Store
+  - .env
+
+README.md:
+  title: "Data Science Project"
+  description: "This project aims to..."
+  
+requirements.txt:
+  - pandas
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - seaborn

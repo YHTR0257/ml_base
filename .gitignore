@@ -3,6 +3,123 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# User-specific stuff
+*.DS_Store
+*.docx
+*.doc
+*.docm
+*.docb
+*.odt
+*.pdf
+*.pptx
+*.ppt
+*.pptm
+general.json
+
+# -------------------------------
+# データ関連（追跡対象外）
+# -------------------------------
+data/
+!data/.gitkeep  # 空ディレクトリ保持用
+/tests/sample*/
+simulations/*/output/
+simulations/*/result/
+experiments/*/raw/
+experiments/*/processed/
+/db_data/
+
+# PostgreSQL データベースダンプや接続キャッシュ
+*.psql
+*.sql
+*.dump
+*.bak
+
+# SQLiteなど汎用データベースファイル（念のため）
+*.db
+*.db-journal
+jobs/
+source/
+
+# 外部データや一時ファイル
+tests/test_jobs/
+deploy.sh
+*.csv
+*.tsv
+*.dat
+*.log
+*.bak
+*.tmp
+/config/settings.py
+
+# -------------------------------
+# ノートブックのチェックポイント
+# -------------------------------
+**/.ipynb_checkpoints
+
+# -------------------------------
+# Pythonキャッシュ・仮想環境
+# -------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+env/
+venv/
+.env
+.venv
+
+# -------------------------------
+# COMSOL関連
+# -------------------------------
+*.mph
+*.mphbin
+simulations/comsol/*/output/
+simulations/comsol/*/geometry/
+
+# -------------------------------
+# ログ・中間生成物
+# -------------------------------
+logs/
+*.out
+*.err
+*.aux
+*.out.*
+*.log.*
+
+# -------------------------------
+# 結果ファイルや可視化画像
+# -------------------------------
+results/
+*.png
+*.jpg
+*.pdf
+*.svg
+
+# -------------------------------
+# Codetest関連
+# -------------------------------
+# Codetestの出力ファイル
+tests/output/
+tests/input/
+
+# -------------------------------
+# OS/IDEによる補助ファイル
+# -------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# -------------------------------
+# その他
+# -------------------------------
+# 自動生成ファイルやマスクなど
+*_mask.npy
+*.h5
+*.ckpt
+
+
 # C extensions
 *.so
 
@@ -167,28 +284,8 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# Abstra
-# Abstra is an AI-powered process automation framework.
-# Ignore directories containing user credentials, local state, and settings.
-# Learn more at https://abstra.io/docs
-.abstra/
-
-# Visual Studio Code
-#  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
-#  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
-#  and can be added to the global gitignore or merged into this file. However, if you prefer, 
-#  you could uncomment the following to ignore the enitre vscode folder
-# .vscode/
-
 # Ruff stuff:
 .ruff_cache/
 
 # PyPI configuration file
 .pypirc
-
-# Cursor
-#  Cursor is an AI-powered code editor. `.cursorignore` specifies files/directories to
-#  exclude from AI features like autocomplete and code analysis. Recommended for sensitive data
-#  refer to https://docs.cursor.com/context/ignore-files
-.cursorignore
-.cursorindexingignore
